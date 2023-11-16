@@ -18,17 +18,23 @@ private:
 	std::stack<char> optStack;
 	std::stack<double> numStack;
 
-	//获取运算符优先级
-	int getLevel(char opt) const;
-	//进行计算
-	double doCalcu();
+	std::string suffix;            //后缀表达式
+	std::string operand;           //显示在屏幕上的数
 
+	void addToSuffix(char& c);
+	void addToSuffix(std::string& str);
+	void clrStack();
+	bool isNumber(std::string& str);
+	double getNumStackValue();
+	int getLevel(char& opt) const;
+	bool doCalcu();
 public:
-	std::string operand;    //显示在屏幕上的数
-	std::string suffix;     //后缀表达式
 	//获取输入内容
 	void getInput(char opt);
-
+	//获取当前数据缓存区内容
+	inline std::string getOperand() const{
+		return operand;
+	}
 };
 
 }
