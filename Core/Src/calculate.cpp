@@ -5,7 +5,7 @@
  *      Author: zhiyuan
  */
 
-# include "calculate.h"
+#include <calculate.hpp>
 
 namespace CALCULATE{
 
@@ -73,7 +73,7 @@ bool Calculate::doCalcu(){
 				if (numStack.size() >= 2) {
 					double n2 = getNumStackValue();
 					double n1 = getNumStackValue();
-					operand = std::to_string(n1 + n2);
+					numStack.push(n1 + n2);
 				}
 				else {
 					return false;
@@ -84,7 +84,7 @@ bool Calculate::doCalcu(){
 				if (numStack.size() >= 2) {
 					double n2 = getNumStackValue();
 					double n1 = getNumStackValue();
-					operand = std::to_string(n1 - n2);
+					numStack.push(n1 - n2);
 				}
 				else {
 					return false;
@@ -95,7 +95,7 @@ bool Calculate::doCalcu(){
 				if (numStack.size() >= 2) {
 					double n2 = getNumStackValue();
 					double n1 = getNumStackValue();
-					operand = std::to_string(n1 * n2);
+					numStack.push(n1 * n2);
 				}
 				else {
 					return false;
@@ -106,7 +106,7 @@ bool Calculate::doCalcu(){
 				if (numStack.size() >= 2) {
 					double n2 = getNumStackValue();
 					double n1 = getNumStackValue();
-					operand = std::to_string(n1 / n2);
+					numStack.push(n1 / n2);
 				}
 				else {
 					return false;
@@ -118,8 +118,11 @@ bool Calculate::doCalcu(){
 		startPos = spacePos + 1;
 		spacePos = suffix.find(' ', startPos);
 	}
-	clrStack();
-	return true;
+	if(numStack.size() == 1){
+		operand = std::to_string(numStack.top());
+		clrStack();
+		return true;
+	}
 }
 
 void Calculate::getInput(char opt){

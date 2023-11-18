@@ -5,8 +5,8 @@
  *      Author: zhiyuan
  */
 
-#ifndef INC_CALCULATE_H_
-#define INC_CALCULATE_H_
+#ifndef INC_CALCULATE_HPP_
+#define INC_CALCULATE_HPP_
 
 #include <stack>
 #include <string>
@@ -39,4 +39,4 @@ public:
 
 }
 
-#endif /* INC_CALCULATE_H_ */
+#endif /* INC_CALCULATE_HPP_ */
