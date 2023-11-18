@@ -98,10 +98,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   Max7219.max7219Init();
   std::string test = "3.1415";
+  Max7219.refreshScreen(test);
   while (1)
   {
-	  Max7219.refreshScreen(test);
-	  HAL_Delay(500);
     /* USER CODE END WHILE */
     /* USER CODE BEGIN 3 */
   }

@@ -1,8 +1,9 @@
 gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	1
 max7219.cpp:9:6:void MAX7219::max7219Send(uint8_t, uint8_t)	1
-max7219.cpp:18:6:void MAX7219::max7219Init()	1
-max7219.cpp:25:6:void MAX7219::setBrightness(uint8_t)	2
-max7219.cpp:30:6:void MAX7219::setTestMode(bool)	2
-max7219.cpp:37:6:void MAX7219::setWorkMode(bool)	2
-max7219.cpp:44:6:void MAX7219::setDecodeMode(uint8_t)	1
-max7219.cpp:48:6:void MAX7219::refreshScreen(std::string)	1
+max7219.cpp:19:6:void MAX7219::max7219Init()	1
+max7219.cpp:28:6:void MAX7219::setBrightness(uint8_t)	2
+max7219.cpp:33:6:void MAX7219::setTestMode(bool)	2
+max7219.cpp:40:6:void MAX7219::setWorkMode(bool)	2
+max7219.cpp:47:6:void MAX7219::setDecodeMode(uint8_t)	1
+max7219.cpp:51:6:void MAX7219::setScanMode(uint8_t)	1
+max7219.cpp:55:6:void MAX7219::refreshScreen(std::string)	1

@@ -46,6 +46,7 @@ public:
 	void setDecodeMode(uint8_t mode);
 	void setBrightness(uint8_t level);
 	void setWorkMode(bool status);
+	void setScanMode(uint8_t mode);
 	void transNums();
 
 	void refreshScreen(std::string s);

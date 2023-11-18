@@ -1,4 +1,4 @@
 gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	1
 main.cpp:67:5:int main()	1
-main.cpp:115:6:void SystemClock_Config()	4
-main.cpp:165:6:void Error_Handler()	1
+main.cpp:114:6:void SystemClock_Config()	4
+main.cpp:164:6:void Error_Handler()	1

@@ -8,15 +8,18 @@
 #ifndef INC_COMMON_H_
 #define INC_COMMON_H_
 
+//当前内部系统时钟频率（SYSCLK）
+#define SYSTEMCLOCKS_PER_SEC 72000000
+
 #include <stm32f1xx_hal.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void delayS(uint32_t s);
-void delayMS(uint32_t ms);
-void delayUS(uint32_t us);
+void delaySecs(uint32_t s);
+void delayMSecs(uint32_t ms);
+void delayUSecs(uint32_t us);
 
 #ifdef __cplusplus
 }
