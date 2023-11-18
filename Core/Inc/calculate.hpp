@@ -10,6 +10,7 @@
 
 #include <stack>
 #include <string>
+#include "common.h"
 
 namespace CALCULATE{
 

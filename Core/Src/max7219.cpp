@@ -12,8 +12,7 @@ void MAX7219::max7219Send(uint8_t address,uint8_t data){
 	HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_RESET);
 	HAL_SPI_Transmit(&MAX7219_SPI,(uint8_t*)&Transmit_buf,1,TRANSMIT_OVERTIME);
 	HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
-
-	delayMSecs(100);
+	delayUSecs(100);
 }
 
 void MAX7219::max7219Init(){
@@ -52,26 +51,32 @@ void MAX7219::setScanMode(uint8_t mode){
 	max7219Send(SCAN_LIMIT, mode);
 }
 
-void MAX7219::refreshScreen(std::string s){
-//	std::string cutted = s.substr(0, 8);
-//	bool isDP = false;
-//	for (int i = cutted.length() - 1; i >= 0; i--) {
-//	    if (cutted[i] == '.') {
-//	        isDP = true;
-//	        continue;
-//	    }
-//	    uint8_t data = static_cast<uint8_t>(cutted[i]);
-//	    if (isDP) {
-//	        data |= 0b10000000;
-//	        isDP = false;
-//     }
-//	    max7219Send(9 - i, data);
-	max7219Send(0x01, 5);
-	max7219Send(0x02, 2);
-	max7219Send(0x03, 1);
-	max7219Send(0x04, 1);
-	max7219Send(0x05, 3);
-	max7219Send(0x06, 1);
-	max7219Send(0x07, 4);
+void MAX7219::clrScreen(){
+	for(uint8_t reg = 0x01; reg <= 8; reg++){
+		max7219Send(reg, 0x0f);
+	}
+}
 
+void MAX7219::refreshScreen(std::string s){
+	bool dpFlag = false;
+	uint8_t reg = 0x01;
+	uint8_t digitCount = 0;
+
+	clrScreen();
+	for (auto it = s.rbegin(); it != s.rend(); ++it) {
+		if (std::isdigit(*it)) {
+	        if (digitCount < 8) {
+	            if (dpFlag) {
+	                max7219Send(reg, *it | 0b10000000);
+	                dpFlag = false;
+	            } else {
+	                max7219Send(reg, *it);
+	            }
+	            reg++;
+	            digitCount++;
+	        }
+	    } else if (*it == '.') {
+	    	dpFlag = true;
+	    }
+	}
 }

@@ -12,6 +12,9 @@
 #define SYSTEMCLOCKS_PER_SEC 72000000
 
 #include <stm32f1xx_hal.h>
+#include <string>
+#include <cstring>
+#include "usbd_cdc_if.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -24,5 +27,7 @@ void delayUSecs(uint32_t us);
 #ifdef __cplusplus
 }
 #endif
+
+void sendStringViaCDC(const std::string& message);
 
 #endif /* INC_COMMON_H_ */

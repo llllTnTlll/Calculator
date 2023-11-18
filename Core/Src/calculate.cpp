@@ -59,6 +59,9 @@ int Calculate::getLevel(char& opt) const{
 
 bool Calculate::doCalcu(){
 	clrStack();
+
+	sendStringViaCDC(suffix);
+
 	size_t startPos = 0;
 	size_t spacePos = suffix.find(' ', startPos);
 	while (spacePos != std::string::npos) {
@@ -136,7 +139,7 @@ void Calculate::getInput(char opt){
 		operand = "";
 		//若为等号开始计算
 		if(opt == '='){
-
+			doCalcu();
 		}
 		//左括号直接入栈
 		else if(opt == '('){

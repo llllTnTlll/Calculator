@@ -1,3 +1,5 @@
-common.c:14:6:delayUSecs	2
-common.c:23:6:delayMSecs	2
-common.c:32:6:delaySecs	2
+gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	1
+common.cpp:14:6:void delayUSecs(uint32_t)	2
+common.cpp:23:6:void delayMSecs(uint32_t)	2
+common.cpp:32:6:void delaySecs(uint32_t)	2
+common.cpp:46:6:void sendStringViaCDC(const string&)	1

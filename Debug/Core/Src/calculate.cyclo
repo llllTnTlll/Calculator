@@ -10,7 +10,7 @@ calculate.cpp:28:6:void CALCULATE::Calculate::clrStack()	3
 calculate.cpp:35:6:bool CALCULATE::Calculate::isNumber(std::string&)	3
 calculate.cpp:44:5:int CALCULATE::Calculate::getLevel(char&) const	5
 calculate.cpp:60:6:bool CALCULATE::Calculate::doCalcu()	13
-calculate.cpp:128:6:void CALCULATE::Calculate::getInput(char)	9
+calculate.cpp:131:6:void CALCULATE::Calculate::getInput(char)	9
 string_conversions.h:63:2:)::_Save_errno::_Save_errno() [with _TRet = double; _Ret = double; _CharT = char; _Base = {}]	1
 string_conversions.h:64:2:)::_Save_errno::~_Save_errno() [with _TRet = double; _Ret = double; _CharT = char; _Base = {}]	2
 string_conversions.h:70:4:)::_Range_chk::_S_chk(_TRet, std::false_type) [with _TRet = double; _Ret = double; _CharT = char; _Base = {}]	1

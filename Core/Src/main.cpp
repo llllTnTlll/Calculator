@@ -52,11 +52,20 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-
+void usbKeepVisable();
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void usbKeepVisable(){
+	GPIO_InitTypeDef GPIO_InitStruct = {0};
+	GPIO_InitStruct.Pin = GPIO_PIN_12;
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+	HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_12,GPIO_PIN_RESET);
+	HAL_Delay(500);
+}
 
 /* USER CODE END 0 */
 
@@ -88,19 +97,26 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  usbKeepVisable();
   MX_USB_DEVICE_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
   MAX7219 Max7219;
+  CALCULATE::Calculate Calcu;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   Max7219.max7219Init();
-  std::string test = "3.1415";
-  Max7219.refreshScreen(test);
+
+  Calcu.getInput('3');
+  Calcu.getInput('+');
+  Calcu.getInput('6');
+  Calcu.getInput('=');
+
   while (1)
   {
+	  Max7219.refreshScreen(Calcu.getOperand());
     /* USER CODE END WHILE */
     /* USER CODE BEGIN 3 */
   }

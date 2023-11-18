@@ -1,9 +1,19 @@
 gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	1
 max7219.cpp:9:6:void MAX7219::max7219Send(uint8_t, uint8_t)	1
-max7219.cpp:19:6:void MAX7219::max7219Init()	1
-max7219.cpp:28:6:void MAX7219::setBrightness(uint8_t)	2
-max7219.cpp:33:6:void MAX7219::setTestMode(bool)	2
-max7219.cpp:40:6:void MAX7219::setWorkMode(bool)	2
-max7219.cpp:47:6:void MAX7219::setDecodeMode(uint8_t)	1
-max7219.cpp:51:6:void MAX7219::setScanMode(uint8_t)	1
-max7219.cpp:55:6:void MAX7219::refreshScreen(std::string)	1
+max7219.cpp:18:6:void MAX7219::max7219Init()	1
+max7219.cpp:27:6:void MAX7219::setBrightness(uint8_t)	2
+max7219.cpp:32:6:void MAX7219::setTestMode(bool)	2
+max7219.cpp:39:6:void MAX7219::setWorkMode(bool)	2
+max7219.cpp:46:6:void MAX7219::setDecodeMode(uint8_t)	1
+max7219.cpp:50:6:void MAX7219::setScanMode(uint8_t)	1
+max7219.cpp:54:6:void MAX7219::clrScreen()	2
+max7219.cpp:60:6:void MAX7219::refreshScreen(std::string)	6
+stl_iterator.h:400:5:bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&) [with _Iterator = __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char> >]	1
+stl_iterator.h:241:7:std::reverse_iterator<_Iterator>& std::reverse_iterator<_Iterator>::operator++() [with _Iterator = __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char> >]	1
+stl_iterator.h:210:7:std::reverse_iterator<_Iterator>::reference std::reverse_iterator<_Iterator>::operator*() const [with _Iterator = __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char> >]	1
+stl_iterator.h:388:5:bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&) [with _Iterator = __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char> >]	1
+stl_iterator.h:1017:7:__gnu_cxx::__normal_iterator<_Iterator, _Container>& __gnu_cxx::__normal_iterator<_Iterator, _Container>::operator--() [with _Iterator = char*; _Container = std::__cxx11::basic_string<char>]	1
+stl_iterator.h:993:7:__gnu_cxx::__normal_iterator<_Iterator, _Container>::reference __gnu_cxx::__normal_iterator<_Iterator, _Container>::operator*() const [with _Iterator = char*; _Container = std::__cxx11::basic_string<char>]	1
+stl_iterator.h:196:7:std::reverse_iterator<_Iterator>::iterator_type std::reverse_iterator<_Iterator>::base() const [with _Iterator = __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char> >]	1
+stl_iterator.h:1097:5:bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&) [with _Iterator = char*; _Container = std::__cxx11::basic_string<char>]	1
+stl_iterator.h:1056:7:const _Iterator& __gnu_cxx::__normal_iterator<_Iterator, _Container>::base() const [with _Iterator = char*; _Container = std::__cxx11::basic_string<char>]	1

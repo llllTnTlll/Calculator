@@ -39,7 +39,13 @@ void delaySecs(uint32_t s){
 }
 
 
-
 #ifdef __cplusplus
 }
 #endif
+
+void sendStringViaCDC(const std::string& message) {
+    const char* cMessage = message.c_str();
+    uint16_t len = strlen(cMessage);
+    CDC_Transmit_FS((uint8_t*)cMessage, len);
+}
+
