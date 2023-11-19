@@ -14,6 +14,7 @@
 #include <stm32f1xx_hal.h>
 #include <string>
 #include <cstring>
+#include <vector>
 #include "usbd_cdc_if.h"
 
 #ifdef __cplusplus
@@ -28,6 +29,15 @@ void delayUSecs(uint32_t us);
 }
 #endif
 
-void sendStringViaCDC(const std::string& message);
+class Log{
+private:
+//	static void sendStringViaCDC(const std::string& message);
+public:
+	static void sendStringViaCDC(const std::string& message);
+	static std::vector<std::string> msgBuffer;
+	static void addMsg(std::string msg);
+	static void clrMsg(char flag);
+	static void DisplayMsg();
+};
 
 #endif /* INC_COMMON_H_ */

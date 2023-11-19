@@ -1,11 +1,9 @@
 gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	1
 stl_deque.h:96:3:constexpr std::size_t std::__deque_buf_size(std::size_t)	2
-calculate.hpp:36:21:std::string CALCULATE::Calculate::getOperand() const	1
-main.cpp:60:6:void usbKeepVisable()	1
 calculate.hpp:17:7:CALCULATE::Calculate::Calculate()	1
-main.cpp:76:5:int main()	1
-main.cpp:130:6:void SystemClock_Config()	4
-main.cpp:180:6:void Error_Handler()	1
+main.cpp:68:5:int main()	1
+main.cpp:133:6:void SystemClock_Config()	4
+main.cpp:183:6:void Error_Handler()	1
 stl_deque.h:831:7:std::deque<_Tp, _Alloc>::deque() [with _Tp = char; _Alloc = std::allocator<char>]	1
 stl_stack.h:162:2:std::stack<_Tp, _Sequence>::stack() [with _Seq = std::deque<char, std::allocator<char> >; _Requires = void; _Tp = char; _Sequence = std::deque<char, std::allocator<char> >]	1
 stl_deque.h:831:7:std::deque<_Tp, _Alloc>::deque() [with _Tp = double; _Alloc = std::allocator<double>]	1

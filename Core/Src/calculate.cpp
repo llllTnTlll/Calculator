@@ -60,7 +60,7 @@ int Calculate::getLevel(char& opt) const{
 bool Calculate::doCalcu(){
 	clrStack();
 
-	sendStringViaCDC(suffix);
+	Log::addMsg(suffix);
 
 	size_t startPos = 0;
 	size_t spacePos = suffix.find(' ', startPos);
@@ -126,6 +126,7 @@ bool Calculate::doCalcu(){
 		clrStack();
 		return true;
 	}
+	return false;
 }
 
 void Calculate::getInput(char opt){
@@ -158,7 +159,12 @@ void Calculate::getInput(char opt){
 				addToSuffix(optStack.top());
 				optStack.pop();
 			}
+			optStack.push(opt);
 		}
+	}
+	while (!optStack.empty()) {
+		addToSuffix(optStack.top());
+		optStack.pop();
 	}
 }
 
