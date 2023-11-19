@@ -93,6 +93,7 @@ int main(void)
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
   MAX7219 Max7219;
+
   CALCULATE::Calculate Calcu;
 
   /* USER CODE END 2 */
@@ -114,11 +115,13 @@ int main(void)
   Calcu.getInput('1');
   Calcu.getInput('-');
   Calcu.getInput('4');
+  Calcu.getInput('=');
 
   while (1)
   {
+	  Log::addMsg(Calcu.getOperand().substr(0,8));
 	  Log::DisplayMsg();
-	  delaySecs(100);
+	  delaySecs(1000);
 //	  Max7219.refreshScreen(Calcu.getOperand());
     /* USER CODE END WHILE */
     /* USER CODE BEGIN 3 */
