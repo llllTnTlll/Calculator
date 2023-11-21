@@ -1,20 +1,19 @@
 gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	1
 stl_deque.h:96:3:constexpr std::size_t std::__deque_buf_size(std::size_t)	2
-calculate.hpp:14:7:Calculate::Calculate()	1
+calculate.hpp:15:7:Calculate::Calculate()	1
 main.cpp:68:5:int main()	1
-main.cpp:133:6:void SystemClock_Config()	4
-main.cpp:183:6:void Error_Handler()	1
+main.cpp:137:6:void SystemClock_Config()	4
+main.cpp:187:6:void Error_Handler()	1
 stl_deque.h:831:7:std::deque<_Tp, _Alloc>::deque() [with _Tp = char; _Alloc = std::allocator<char>]	1
 stl_stack.h:162:2:std::stack<_Tp, _Sequence>::stack() [with _Seq = std::deque<char, std::allocator<char> >; _Requires = void; _Tp = char; _Sequence = std::deque<char, std::allocator<char> >]	1
-stl_deque.h:831:7:std::deque<_Tp, _Alloc>::deque() [with _Tp = double; _Alloc = std::allocator<double>]	1
-stl_stack.h:162:2:std::stack<_Tp, _Sequence>::stack() [with _Seq = std::deque<double, std::allocator<double> >; _Requires = void; _Tp = double; _Sequence = std::deque<double, std::allocator<double> >]	1
+stl_deque.h:831:7:std::deque<_Tp, _Alloc>::deque() [with _Tp = float; _Alloc = std::allocator<float>]	1
+stl_stack.h:162:2:std::stack<_Tp, _Sequence>::stack() [with _Seq = std::deque<float, std::allocator<float> >; _Requires = void; _Tp = float; _Sequence = std::deque<float, std::allocator<float> >]	1
 stl_deque.h:434:7:std::_Deque_base<_Tp, _Alloc>::_Deque_base() [with _Tp = char; _Alloc = std::allocator<char>]	1
-stl_deque.h:434:7:std::_Deque_base<_Tp, _Alloc>::_Deque_base() [with _Tp = double; _Alloc = std::allocator<double>]	1
+stl_deque.h:434:7:std::_Deque_base<_Tp, _Alloc>::_Deque_base() [with _Tp = float; _Alloc = std::allocator<float>]	1
 stl_deque.h:521:2:std::_Deque_base<_Tp, _Alloc>::_Deque_impl::_Deque_impl() [with _Tp = char; _Alloc = std::allocator<char>]	1
 stl_deque.h:614:5:void std::_Deque_base<_Tp, _Alloc>::_M_initialize_map(std::size_t) [with _Tp = char; _Alloc = std::allocator<char>]	1
-stl_deque.h:521:2:std::_Deque_base<_Tp, _Alloc>::_Deque_impl::_Deque_impl() [with _Tp = double; _Alloc = std::allocator<double>]	1
-stl_deque.h:614:5:void std::_Deque_base<_Tp, _Alloc>::_M_initialize_map(std::size_t) [with _Tp = double; _Alloc = std::allocator<double>]	1
-alloc_traits.h:459:7:static _Tp* std::allocator_traits<std::allocator<_CharT> >::allocate(std::allocator_traits<std::allocator<_CharT> >::allocator_type&, std::allocator_traits<std::allocator<_CharT> >::size_type) [with _Tp = char]	1
+stl_deque.h:521:2:std::_Deque_base<_Tp, _Alloc>::_Deque_impl::_Deque_impl() [with _Tp = float; _Alloc = std::allocator<float>]	1
+stl_deque.h:614:5:void std::_Deque_base<_Tp, _Alloc>::_M_initialize_map(std::size_t) [with _Tp = float; _Alloc = std::allocator<float>]	1
 stl_deque.h:492:2:std::_Deque_base<_Tp, _Alloc>::_Deque_impl_data::_Deque_impl_data() [with _Tp = char; _Alloc = std::allocator<char>]	1
 stl_algobase.h:254:5:constexpr const _Tp& std::max(const _Tp&, const _Tp&) [with _Tp = unsigned int]	2
 stl_deque.h:570:7:std::_Deque_base<_Tp, _Alloc>::_Map_pointer std::_Deque_base<_Tp, _Alloc>::_M_allocate_map(std::size_t) [with _Tp = char; _Alloc = std::allocator<char>]	1
@@ -22,14 +21,13 @@ stl_deque.h:653:5:void std::_Deque_base<_Tp, _Alloc>::_M_create_nodes(std::_Dequ
 stl_deque.h:260:7:void std::_Deque_iterator<_Tp, _Ref, _Ptr>::_M_set_node(std::_Deque_iterator<_Tp, _Ref, _Ptr>::_Map_pointer) [with _Tp = char; _Ref = char&; _Ptr = char*]	1
 stl_deque.h:552:7:std::_Deque_base<_Tp, _Alloc>::_Map_alloc_type std::_Deque_base<_Tp, _Alloc>::_M_get_map_allocator() const [with _Tp = char; _Alloc = std::allocator<char>]	1
 allocator.h:182:7:std::allocator< <template-parameter-1-1> >::~allocator() [with _Tp = char*]	1
-allocator.h:164:7:std::allocator< <template-parameter-1-1> >::allocator() [with _Tp = double]	1
-stl_deque.h:492:2:std::_Deque_base<_Tp, _Alloc>::_Deque_impl_data::_Deque_impl_data() [with _Tp = double; _Alloc = std::allocator<double>]	1
-stl_deque.h:570:7:std::_Deque_base<_Tp, _Alloc>::_Map_pointer std::_Deque_base<_Tp, _Alloc>::_M_allocate_map(std::size_t) [with _Tp = double; _Alloc = std::allocator<double>]	1
-stl_deque.h:653:5:void std::_Deque_base<_Tp, _Alloc>::_M_create_nodes(std::_Deque_base<_Tp, _Alloc>::_Map_pointer, std::_Deque_base<_Tp, _Alloc>::_Map_pointer) [with _Tp = double; _Alloc = std::allocator<double>]	2
-stl_deque.h:260:7:void std::_Deque_iterator<_Tp, _Ref, _Ptr>::_M_set_node(std::_Deque_iterator<_Tp, _Ref, _Ptr>::_Map_pointer) [with _Tp = double; _Ref = double&; _Ptr = double*]	1
-stl_deque.h:552:7:std::_Deque_base<_Tp, _Alloc>::_Map_alloc_type std::_Deque_base<_Tp, _Alloc>::_M_get_map_allocator() const [with _Tp = double; _Alloc = std::allocator<double>]	1
-allocator.h:182:7:std::allocator< <template-parameter-1-1> >::~allocator() [with _Tp = double*]	1
-new_allocator.h:103:7:_Tp* __gnu_cxx::new_allocator<_Tp>::allocate(__gnu_cxx::new_allocator<_Tp>::size_type, const void*) [with _Tp = char]	1
+allocator.h:164:7:std::allocator< <template-parameter-1-1> >::allocator() [with _Tp = float]	1
+stl_deque.h:492:2:std::_Deque_base<_Tp, _Alloc>::_Deque_impl_data::_Deque_impl_data() [with _Tp = float; _Alloc = std::allocator<float>]	1
+stl_deque.h:570:7:std::_Deque_base<_Tp, _Alloc>::_Map_pointer std::_Deque_base<_Tp, _Alloc>::_M_allocate_map(std::size_t) [with _Tp = float; _Alloc = std::allocator<float>]	1
+stl_deque.h:653:5:void std::_Deque_base<_Tp, _Alloc>::_M_create_nodes(std::_Deque_base<_Tp, _Alloc>::_Map_pointer, std::_Deque_base<_Tp, _Alloc>::_Map_pointer) [with _Tp = float; _Alloc = std::allocator<float>]	2
+stl_deque.h:260:7:void std::_Deque_iterator<_Tp, _Ref, _Ptr>::_M_set_node(std::_Deque_iterator<_Tp, _Ref, _Ptr>::_Map_pointer) [with _Tp = float; _Ref = float&; _Ptr = float*]	1
+stl_deque.h:552:7:std::_Deque_base<_Tp, _Alloc>::_Map_alloc_type std::_Deque_base<_Tp, _Alloc>::_M_get_map_allocator() const [with _Tp = float; _Alloc = std::allocator<float>]	1
+allocator.h:182:7:std::allocator< <template-parameter-1-1> >::~allocator() [with _Tp = float*]	1
 stl_deque.h:151:7:std::_Deque_iterator<_Tp, _Ref, _Ptr>::_Deque_iterator() [with _Tp = char; _Ref = char&; _Ptr = char*]	1
 alloc_traits.h:459:7:static _Tp* std::allocator_traits<std::allocator<_CharT> >::allocate(std::allocator_traits<std::allocator<_CharT> >::allocator_type&, std::allocator_traits<std::allocator<_CharT> >::size_type) [with _Tp = char*]	1
 stl_deque.h:556:7:std::_Deque_base<_Tp, _Alloc>::_Ptr std::_Deque_base<_Tp, _Alloc>::_M_allocate_node() [with _Tp = char; _Alloc = std::allocator<char>]	1
@@ -37,24 +35,23 @@ stl_deque.h:131:21:static std::size_t std::_Deque_iterator<_Tp, _Ref, _Ptr>::_S_
 stl_deque.h:548:7:const _Tp_alloc_type& std::_Deque_base<_Tp, _Alloc>::_M_get_Tp_allocator() const [with _Tp = char; _Alloc = std::allocator<char>]	1
 allocator.h:177:2:std::allocator< <template-parameter-1-1> >::allocator(const std::allocator<_Tp1>&) [with _Tp1 = char; _Tp = char*]	1
 new_allocator.h:89:7:__gnu_cxx::new_allocator<_Tp>::~new_allocator() [with _Tp = char*]	1
-new_allocator.h:79:7:__gnu_cxx::new_allocator<_Tp>::new_allocator() [with _Tp = double]	1
-stl_deque.h:151:7:std::_Deque_iterator<_Tp, _Ref, _Ptr>::_Deque_iterator() [with _Tp = double; _Ref = double&; _Ptr = double*]	1
-alloc_traits.h:459:7:static _Tp* std::allocator_traits<std::allocator<_CharT> >::allocate(std::allocator_traits<std::allocator<_CharT> >::allocator_type&, std::allocator_traits<std::allocator<_CharT> >::size_type) [with _Tp = double*]	1
-stl_deque.h:556:7:std::_Deque_base<_Tp, _Alloc>::_Ptr std::_Deque_base<_Tp, _Alloc>::_M_allocate_node() [with _Tp = double; _Alloc = std::allocator<double>]	1
-stl_deque.h:131:21:static std::size_t std::_Deque_iterator<_Tp, _Ref, _Ptr>::_S_buffer_size() [with _Tp = double; _Ref = double&; _Ptr = double*]	1
-stl_deque.h:548:7:const _Tp_alloc_type& std::_Deque_base<_Tp, _Alloc>::_M_get_Tp_allocator() const [with _Tp = double; _Alloc = std::allocator<double>]	1
-allocator.h:177:2:std::allocator< <template-parameter-1-1> >::allocator(const std::allocator<_Tp1>&) [with _Tp1 = double; _Tp = double*]	1
-new_allocator.h:89:7:__gnu_cxx::new_allocator<_Tp>::~new_allocator() [with _Tp = double*]	1
-new_allocator.h:191:7:constexpr __gnu_cxx::new_allocator<_Tp>::size_type __gnu_cxx::new_allocator<_Tp>::_M_max_size() const [with _Tp = char]	1
+new_allocator.h:79:7:__gnu_cxx::new_allocator<_Tp>::new_allocator() [with _Tp = float]	1
+stl_deque.h:151:7:std::_Deque_iterator<_Tp, _Ref, _Ptr>::_Deque_iterator() [with _Tp = float; _Ref = float&; _Ptr = float*]	1
+alloc_traits.h:459:7:static _Tp* std::allocator_traits<std::allocator<_CharT> >::allocate(std::allocator_traits<std::allocator<_CharT> >::allocator_type&, std::allocator_traits<std::allocator<_CharT> >::size_type) [with _Tp = float*]	1
+stl_deque.h:556:7:std::_Deque_base<_Tp, _Alloc>::_Ptr std::_Deque_base<_Tp, _Alloc>::_M_allocate_node() [with _Tp = float; _Alloc = std::allocator<float>]	1
+stl_deque.h:131:21:static std::size_t std::_Deque_iterator<_Tp, _Ref, _Ptr>::_S_buffer_size() [with _Tp = float; _Ref = float&; _Ptr = float*]	1
+stl_deque.h:548:7:const _Tp_alloc_type& std::_Deque_base<_Tp, _Alloc>::_M_get_Tp_allocator() const [with _Tp = float; _Alloc = std::allocator<float>]	1
+allocator.h:177:2:std::allocator< <template-parameter-1-1> >::allocator(const std::allocator<_Tp1>&) [with _Tp1 = float; _Tp = float*]	1
+new_allocator.h:89:7:__gnu_cxx::new_allocator<_Tp>::~new_allocator() [with _Tp = float*]	1
 new_allocator.h:103:7:_Tp* __gnu_cxx::new_allocator<_Tp>::allocate(__gnu_cxx::new_allocator<_Tp>::size_type, const void*) [with _Tp = char*]	1
+alloc_traits.h:459:7:static _Tp* std::allocator_traits<std::allocator<_CharT> >::allocate(std::allocator_traits<std::allocator<_CharT> >::allocator_type&, std::allocator_traits<std::allocator<_CharT> >::size_type) [with _Tp = char]	1
 new_allocator.h:79:7:__gnu_cxx::new_allocator<_Tp>::new_allocator() [with _Tp = char*]	1
-new_allocator.h:103:7:_Tp* __gnu_cxx::new_allocator<_Tp>::allocate(__gnu_cxx::new_allocator<_Tp>::size_type, const void*) [with _Tp = double*]	1
-alloc_traits.h:459:7:static _Tp* std::allocator_traits<std::allocator<_CharT> >::allocate(std::allocator_traits<std::allocator<_CharT> >::allocator_type&, std::allocator_traits<std::allocator<_CharT> >::size_type) [with _Tp = double]	1
-new_allocator.h:79:7:__gnu_cxx::new_allocator<_Tp>::new_allocator() [with _Tp = double*]	1
+new_allocator.h:103:7:_Tp* __gnu_cxx::new_allocator<_Tp>::allocate(__gnu_cxx::new_allocator<_Tp>::size_type, const void*) [with _Tp = float*]	1
+alloc_traits.h:459:7:static _Tp* std::allocator_traits<std::allocator<_CharT> >::allocate(std::allocator_traits<std::allocator<_CharT> >::allocator_type&, std::allocator_traits<std::allocator<_CharT> >::size_type) [with _Tp = float]	1
+new_allocator.h:79:7:__gnu_cxx::new_allocator<_Tp>::new_allocator() [with _Tp = float*]	1
 new_allocator.h:191:7:constexpr __gnu_cxx::new_allocator<_Tp>::size_type __gnu_cxx::new_allocator<_Tp>::_M_max_size() const [with _Tp = char*]	1
-new_allocator.h:191:7:constexpr __gnu_cxx::new_allocator<_Tp>::size_type __gnu_cxx::new_allocator<_Tp>::_M_max_size() const [with _Tp = double*]	1
-new_allocator.h:103:7:_Tp* __gnu_cxx::new_allocator<_Tp>::allocate(__gnu_cxx::new_allocator<_Tp>::size_type, const void*) [with _Tp = double]	1
-new_allocator.h:191:7:constexpr __gnu_cxx::new_allocator<_Tp>::size_type __gnu_cxx::new_allocator<_Tp>::_M_max_size() const [with _Tp = double]	1
-main.cpp:192:1:void __static_initialization_and_destruction_0(int, int)	5
-main.cpp:192:1:cpp)	1
-main.cpp:192:1:cpp)	1
+new_allocator.h:103:7:_Tp* __gnu_cxx::new_allocator<_Tp>::allocate(__gnu_cxx::new_allocator<_Tp>::size_type, const void*) [with _Tp = char]	1
+new_allocator.h:191:7:constexpr __gnu_cxx::new_allocator<_Tp>::size_type __gnu_cxx::new_allocator<_Tp>::_M_max_size() const [with _Tp = float*]	1
+new_allocator.h:103:7:_Tp* __gnu_cxx::new_allocator<_Tp>::allocate(__gnu_cxx::new_allocator<_Tp>::size_type, const void*) [with _Tp = float]	1
+new_allocator.h:191:7:constexpr __gnu_cxx::new_allocator<_Tp>::size_type __gnu_cxx::new_allocator<_Tp>::_M_max_size() const [with _Tp = char]	1
+new_allocator.h:191:7:constexpr __gnu_cxx::new_allocator<_Tp>::size_type __gnu_cxx::new_allocator<_Tp>::_M_max_size() const [with _Tp = float]	1

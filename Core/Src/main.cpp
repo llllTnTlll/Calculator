@@ -47,7 +47,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-static std::string s;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -114,12 +114,16 @@ int main(void)
   Calcu.getInput('/');
   Calcu.getInput('1');
   Calcu.getInput('-');
-  Calcu.getInput('4');
+  Calcu.getInput('9');
+  Calcu.getInput('.');
+  Calcu.getInput('7');
   Calcu.getInput('=');
 
-  s = Calcu.getOperand();
+  std::string o = Calcu.getOperand();
   while (1)
   {
+	  Max7219.refreshScreen(o);
+	  HAL_Delay(100);
     /* USER CODE END WHILE */
     /* USER CODE BEGIN 3 */
   }
