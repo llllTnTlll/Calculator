@@ -1,5 +1,5 @@
 stm32f1xx_hal_pcd.c:290:13:HAL_PCD_MspInit	1
-stm32f1xx_hal_pcd.c:131:19:HAL_PCD_Init	7
+stm32f1xx_hal_pcd.c:131:19:HAL_PCD_Init	8
 stm32f1xx_hal_pcd.c:305:13:HAL_PCD_MspDeInit	1
 stm32f1xx_hal_pcd.c:251:19:HAL_PCD_DeInit	3
 stm32f1xx_hal_pcd.c:863:19:HAL_PCD_Start	2
@@ -19,7 +19,7 @@ stm32f1xx_hal_pcd.c:1633:13:HAL_PCD_DisconnectCallback	1
 stm32f1xx_hal_pcd.c:1667:19:HAL_PCD_DevConnect	2
 stm32f1xx_hal_pcd.c:1686:19:HAL_PCD_DevDisconnect	2
 stm32f1xx_hal_pcd.c:1706:19:HAL_PCD_SetAddress	2
-stm32f1xx_hal_pcd.c:1329:6:HAL_PCD_IRQHandler	86
+stm32f1xx_hal_pcd.c:1329:6:HAL_PCD_IRQHandler	92
 stm32f1xx_hal_pcd.c:1723:19:HAL_PCD_EP_Open	4
 stm32f1xx_hal_pcd.c:1771:19:HAL_PCD_EP_Close	3
 stm32f1xx_hal_pcd.c:1802:19:HAL_PCD_EP_Receive	1

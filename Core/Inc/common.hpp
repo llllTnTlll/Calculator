@@ -5,8 +5,8 @@
  *      Author: zhiyuan
  */
 
-#ifndef INC_COMMON_H_
-#define INC_COMMON_H_
+#ifndef INC_COMMON_HPP_
+#define INC_COMMON_HPP_
 
 //当前内部系统时钟频率（SYSCLK）
 #define SYSTEMCLOCKS_PER_SEC 72000000
@@ -25,6 +25,8 @@ void delaySecs(uint32_t s);
 void delayMSecs(uint32_t ms);
 void delayUSecs(uint32_t us);
 
+void keepUSBVisable();
+
 #ifdef __cplusplus
 }
 #endif
@@ -40,4 +42,4 @@ public:
 	static void DisplayMsg();
 };
 
-#endif /* INC_COMMON_H_ */
+#endif /* INC_COMMON_HPP_ */

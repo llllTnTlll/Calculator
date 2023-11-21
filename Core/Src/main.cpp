@@ -17,7 +17,8 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
-#include "main.h"
+#include <common.hpp>
+#include <main.hpp>
 #include "spi.h"
 #include "usb_device.h"
 #include "gpio.h"
@@ -26,7 +27,6 @@
 /* USER CODE BEGIN Includes */
 #include "max7219.hpp"
 #include "calculate.hpp"
-#include "common.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,7 +47,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+static std::string s;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -89,11 +89,12 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  keepUSBVisable();
   MX_USB_DEVICE_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
   MAX7219 Max7219;
-  CALCULATE::Calculate Calcu;
+  Calculate Calcu;
 
   /* USER CODE END 2 */
 
@@ -114,12 +115,11 @@ int main(void)
   Calcu.getInput('1');
   Calcu.getInput('-');
   Calcu.getInput('4');
+  Calcu.getInput('=');
 
+  s = Calcu.getOperand();
   while (1)
   {
-	  Log::DisplayMsg();
-	  delaySecs(100);
-//	  Max7219.refreshScreen(Calcu.getOperand());
     /* USER CODE END WHILE */
     /* USER CODE BEGIN 3 */
   }

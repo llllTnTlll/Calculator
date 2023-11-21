@@ -30,11 +30,11 @@
 //译码模式
 #define DECODE_D0_D7       0xFF
 
-#include "main.h"
+#include <main.hpp>
 #include "spi.h"
 #include "stm32f1xx_hal.h"
 #include "stm32f1xx_hal_spi.h"
-#include "common.h"
+#include <common.hpp>
 #include <string>
 
 class MAX7219{

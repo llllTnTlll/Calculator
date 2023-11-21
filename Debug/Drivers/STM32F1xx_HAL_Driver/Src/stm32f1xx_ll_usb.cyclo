@@ -23,6 +23,6 @@ stm32f1xx_ll_usb.c:2756:7:USB_ClearInterrupts	1
 stm32f1xx_ll_usb.c:2773:19:USB_EP0_OutStart	1
 stm32f1xx_ll_usb.c:2790:19:USB_ActivateRemoteWakeup	1
 stm32f1xx_ll_usb.c:2802:19:USB_DeActivateRemoteWakeup	1
-stm32f1xx_ll_usb.c:2817:6:USB_WritePMA	2
-stm32f1xx_ll_usb.c:2282:19:USB_EPStartXfer	51
-stm32f1xx_ll_usb.c:2852:6:USB_ReadPMA	3
+stm32f1xx_ll_usb.c:2817:6:USB_WritePMA	3
+stm32f1xx_ll_usb.c:2282:19:USB_EPStartXfer	67
+stm32f1xx_ll_usb.c:2852:6:USB_ReadPMA	4
