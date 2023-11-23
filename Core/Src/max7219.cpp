@@ -63,9 +63,6 @@ void MAX7219::refreshScreen(std::string s){
 	uint8_t digitCount = 0;
 
 	clrScreen();
-	if(s.length() == 0)
-		return;
-
 	for (auto it = s.rbegin(); it != s.rend(); ++it) {
 		if (std::isdigit(*it)) {
 	        if (digitCount < 8) {
@@ -78,7 +75,13 @@ void MAX7219::refreshScreen(std::string s){
 	            reg++;
 	            digitCount++;
 	        }
-	    } else if (*it == '.') {
+	    }
+		else if(*it == '-'){
+			max7219Send(reg, 10);
+			reg++;
+			digitCount++;
+		}
+		else if (*it == '.') {
 	    	dpFlag = true;
 	    }
 	}

@@ -99,7 +99,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   //2*(3+5)+7/1-4
   Calcu.getInput('4');
-  Calcu.getInput('*');
+  Calcu.getInput('-');
   Calcu.getInput('9');
   Calcu.getInput('.');
   Calcu.getInput('7');
