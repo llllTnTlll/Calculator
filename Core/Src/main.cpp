@@ -25,8 +25,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "max7219.hpp"
-#include "calculate.hpp"
+#include "calculator.hpp"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -93,37 +92,21 @@ int main(void)
   MX_USB_DEVICE_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
-  MAX7219 Max7219;
-  Calculate Calcu;
-
+  Calculator Calcu;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  Max7219.max7219Init();
   //2*(3+5)+7/1-4
-  Calcu.getInput('2');
+  Calcu.getInput('4');
   Calcu.getInput('*');
-  Calcu.getInput('(');
-  Calcu.getInput('3');
-  Calcu.getInput('+');
-  Calcu.getInput('5');
-  Calcu.getInput(')');
-  Calcu.getInput('+');
-  Calcu.getInput('7');
-  Calcu.getInput('/');
-  Calcu.getInput('1');
-  Calcu.getInput('-');
   Calcu.getInput('9');
   Calcu.getInput('.');
   Calcu.getInput('7');
   Calcu.getInput('=');
 
-  std::string o = Calcu.getOperand();
   while (1)
   {
-	  Max7219.refreshScreen(o);
-	  HAL_Delay(100);
     /* USER CODE END WHILE */
     /* USER CODE BEGIN 3 */
   }

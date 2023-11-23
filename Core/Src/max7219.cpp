@@ -63,6 +63,9 @@ void MAX7219::refreshScreen(std::string s){
 	uint8_t digitCount = 0;
 
 	clrScreen();
+	if(s.length() == 0)
+		return;
+
 	for (auto it = s.rbegin(); it != s.rend(); ++it) {
 		if (std::isdigit(*it)) {
 	        if (digitCount < 8) {

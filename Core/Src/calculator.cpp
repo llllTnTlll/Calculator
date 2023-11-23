@@ -5,37 +5,41 @@
  *      Author: zhiyuan
  */
 
-#include "calculate.hpp"
+#include <calculator.hpp>
 
+Calculator::Calculator():Screen(){
+	Screen.max7219Init();
+	Screen.setBrightness(15);
+}
 
-void Calculate::addToSuffix(char& c) {
+void Calculator::addToSuffix(char& c) {
 	suffix += c;
 	if (c != ' ') {
 		suffix += ' ';
 	}
 }
 
-void Calculate::addToSuffix(std::string& str) {
+void Calculator::addToSuffix(std::string& str) {
 	suffix += str;
 	if (!str.empty()) {
 		suffix += ' ';
 	}
 }
 
-float Calculate::getNumStackValue() {
+float Calculator::getNumStackValue() {
 	float n = numStack.top();
 	numStack.pop();
 	return n;
 }
 
-void Calculate::clrStack() {
+void Calculator::clrStack() {
 	while (!optStack.empty())
 		optStack.pop();
 	while (!numStack.empty())
 		numStack.pop();
 }
 
-bool Calculate::isNumber(const std::string& str) {
+bool Calculator::isNumber(const std::string& str) {
 	// 空字符串不是数字
 	if (str.empty()) {
 		return false;
@@ -64,7 +68,7 @@ bool Calculate::isNumber(const std::string& str) {
 	return hasDigit; // 至少包含一个数字才是有效数字
 }
 
-int Calculate::getLevel(char& opt) const {
+int Calculator::getLevel(char& opt) const {
 	switch (opt) {
 	case '(':
 		return 0;
@@ -80,9 +84,8 @@ int Calculate::getLevel(char& opt) const {
 	return -1;
 }
 
-bool Calculate::doCalcu() {
+bool Calculator::doCalcu() {
 	clrStack();
-
 	size_t startPos = 0;
 	size_t spacePos = suffix.find(' ', startPos);
 	while (spacePos != std::string::npos) {
@@ -143,22 +146,22 @@ bool Calculate::doCalcu() {
 		spacePos = suffix.find(' ', startPos);
 	}
 	if (numStack.size() == 1) {
-		operand = std::to_string(numStack.top());
+	    setOperand(std::to_string(numStack.top()));
 		clrStack();
 		return true;
 	}
 	return false;
 }
 
-void Calculate::getInput(char opt) {
+void Calculator::getInput(char opt) {
 	//若输入字符是未完成的状态将其写入数字缓存区
 	if (std::isdigit(opt) || opt == '.') {
-		operand += opt;
+		addOperand(opt);
 	}
 	else {
 		//若不是数字说明上一个操作数输入完毕
 		addToSuffix(operand);
-		operand = "";
+		setOperand("");
 		//若为等号开始计算
 		if (opt == '=') {
 			while (!optStack.empty()) {
@@ -190,11 +193,30 @@ void Calculate::getInput(char opt) {
 	}
 }
 
-std::string Calculate::getOperand() const {
-	std::string o = operand;
-	return o;
+std::string Calculator::getOperand() const {
+	return operand;
 }
 
-void Calculate::setOperand(std::string s) {
-	operand = s;
+void Calculator::setOperand(std::string s) {
+	std::string result;
+	uint8_t included = 0;
+	for (char c : s) {
+		if((c == '-' && result.empty()) || std::isdigit(c)) {
+			result += c;
+			included += 1;
+		}
+		else if (c == '.' && result.find('.') == std::string::npos) {
+			result += c;
+		}
+		if (included == 8) {
+			break;
+		}
+	}
+	operand = result;
+	Screen.refreshScreen(operand);
+}
+
+void Calculator::addOperand(char c){
+	operand += c;
+	Screen.refreshScreen(operand);
 }

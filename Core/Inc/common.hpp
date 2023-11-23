@@ -13,7 +13,6 @@
 
 #include <stm32f1xx_hal.h>
 #include <string>
-#include <cstring>
 #include <vector>
 #include "usbd_cdc_if.h"
 
