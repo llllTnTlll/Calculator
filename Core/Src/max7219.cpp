@@ -60,9 +60,9 @@ void MAX7219::binkScreen(){
 	std::string bink = "--------";
 	for(int i = 0; i <= 2; i++){
 		refreshScreen(bink);
-		delayMSecs(500);
+		delayMSecs(200);
 		clrScreen();
-		delayMSecs(500);
+		delayMSecs(200);
 	}
 }
 

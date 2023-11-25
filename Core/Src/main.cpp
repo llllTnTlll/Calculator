@@ -95,7 +95,7 @@ int main(void)
   Calculator Calcu;
   /* USER CODE END 2 */
   Calcu.getInput('3');
-  Calcu.getInput('*');
+  Calcu.getInput('/');
   Calcu.getInput('0');
   Calcu.getInput('=');
 
