@@ -7,12 +7,11 @@
 # include "max7219.hpp"
 
 void MAX7219::max7219Send(uint8_t address,uint8_t data){
-
 	uint16_t Transmit_buf = (0x00ff&data)|(0xff00&(address<<8));
 	HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_RESET);
 	HAL_SPI_Transmit(&MAX7219_SPI,(uint8_t*)&Transmit_buf,1,TRANSMIT_OVERTIME);
 	HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
-	delayUSecs(100);
+	delayUSecs(500);
 }
 
 void MAX7219::max7219Init(){
@@ -54,6 +53,16 @@ void MAX7219::setScanMode(uint8_t mode){
 void MAX7219::clrScreen(){
 	for(uint8_t reg = 0x01; reg <= 8; reg++){
 		max7219Send(reg, 0x0f);
+	}
+}
+
+void MAX7219::binkScreen(){
+	std::string bink = "--------";
+	for(int i = 0; i <= 2; i++){
+		refreshScreen(bink);
+		delayMSecs(500);
+		clrScreen();
+		delayMSecs(500);
 	}
 }
 

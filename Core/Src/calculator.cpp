@@ -133,7 +133,10 @@ bool Calculator::doCalcu() {
 				if (numStack.size() >= 2) {
 					float n2 = getNumStackValue();
 					float n1 = getNumStackValue();
-					numStack.push(n1 / n2);
+					if(n1 != 0 && n2 != 0)
+						numStack.push(n1 / n2);
+					else
+						return false;
 				}
 				else {
 					return false;
@@ -168,7 +171,9 @@ void Calculator::getInput(char opt) {
 				addToSuffix(optStack.top());
 				optStack.pop();
 			}
-			doCalcu();
+			if(!doCalcu()){
+				resetAll();
+			}
 		}
 		//左括号直接入栈
 		else if (opt == '(') {
@@ -219,4 +224,11 @@ void Calculator::setOperand(std::string s) {
 void Calculator::addOperand(char c){
 	operand += c;
 	Screen.refreshScreen(operand);
+}
+
+void Calculator::resetAll(){
+	operand.clear();
+	suffix.clear();
+	clrStack();
+	Screen.binkScreen();
 }

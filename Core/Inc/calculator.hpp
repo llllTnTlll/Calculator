@@ -27,9 +27,9 @@ class Calculator {
 		float getNumStackValue();
 		void clrStack();
 		bool isNumber(const std::string& str);
-
 		int getLevel(char& opt) const;
 		bool doCalcu();
+		void resetAll();
 
 		MAX7219 Screen;
 	public:

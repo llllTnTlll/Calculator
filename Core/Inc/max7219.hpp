@@ -47,6 +47,7 @@ public:
 	void setWorkMode(bool status);
 	void setScanMode(uint8_t mode);
 	void clrScreen();
+	void binkScreen();
 	void refreshScreen(std::string s);
 };
 

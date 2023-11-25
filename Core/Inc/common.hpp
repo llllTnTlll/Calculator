@@ -8,9 +8,6 @@
 #ifndef INC_COMMON_HPP_
 #define INC_COMMON_HPP_
 
-//当前内部系统时钟频率（SYSCLK）
-#define SYSTEMCLOCKS_PER_SEC 72000000
-
 #include <stm32f1xx_hal.h>
 #include <string>
 #include <vector>
@@ -20,9 +17,9 @@
 extern "C" {
 #endif
 
-void delaySecs(uint32_t s);
-void delayMSecs(uint32_t ms);
+void initDelay();
 void delayUSecs(uint32_t us);
+void delayMSecs(uint32_t ms);
 
 void keepUSBVisable();
 
